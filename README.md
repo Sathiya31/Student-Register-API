@@ -23,7 +23,7 @@ Method: POST
 data: {}
 
 # Update Student Details
-URL: /students/{rollNo}
+URL: /students
 Method: PUT
 data:{}
 
