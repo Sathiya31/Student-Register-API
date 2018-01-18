@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">Student Detail</mat-toolbar>
+
+<mat-card>
+  <div mat-card-avatar class="example-header-image"></div>
+  <mat-card-title style="display:inline; margin-left:5px; font-size:30px; vertical-align:top">{{studentData.name}}</mat-card-title>
+  <mat-card-content>
+    <div class="viewRow"><b>Roll No:</b> {{studentData.rollNo}}</div>
+    <div class="viewRow"><b>Gender:</b> {{studentData.gender}}</div>
+    <div class="viewRow"><b>Age:</b> {{studentData.age}}</div>
+    <div class="viewRow"><b>Marks:</b> {{studentData.marks}}</div>
+    <div class="viewRow"><b>Average:</b> {{studentData.average}}</div>
+  </mat-card-content>
+</mat-card>

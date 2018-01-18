@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">Add Details</mat-toolbar>
+<mat-card>
+<form #studentForm="ngForm" ngNativeValidate>
+<div layout="row">
+  <div class="form-field">
+      <mat-form-field >
+    <input matInput type="number" name="rollNo" placeholder="Roll No" [(ngModel)]="studentData.rollNo" [disabled]="editFlag" required>
+    </mat-form-field>
+  </div>
+  <div class="form-field">
+      <mat-form-field >
+      <input matInput type="text" name="name" placeholder="Name" [(ngModel)]="studentData.name" required>
+      </mat-form-field>
+  </div>
+</div>
+<div layout="row">
+    <div class="form-field">
+        <mat-form-field >
+      <input matInput type="number" name="marks" placeholder="Marks" [(ngModel)]="studentData.marks">
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+        <mat-form-field >
+        <input matInput type="number" name="average" placeholder="Average" [(ngModel)]="studentData.average">
+        </mat-form-field>
+    </div>
+</div>
+<div layout="row">
+    <div class="form-field">
+        <mat-form-field >
+        <input matInput type="number" name="age" placeholder="Age" [(ngModel)]="studentData.age" required>
+        </mat-form-field>
+    </div>
+    <div class="form-field">
+        Gender
+            <mat-radio-group name="gender" [(ngModel)]="studentData.gender"  color="accent">
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+              </mat-radio-group>
+        
+    </div>
+  </div>
+  <div>
+      <button mat-raised-button (click)="onCloseClick()">Close</button>
+      <button mat-raised-button color="primary" *ngIf="!editFlag" [disabled]="!studentForm.form.valid" (click)="onSaveClick()">Save</button>
+      <button mat-raised-button color="primary" *ngIf="editFlag" [disabled]="!studentForm.form.valid" (click)="onUpdateClick(studentData.rollNo)">Update</button>
+  </div>
+</form>
+</mat-card>
+<mat-spinner class="spinner" *ngIf="showSpinner"></mat-spinner>

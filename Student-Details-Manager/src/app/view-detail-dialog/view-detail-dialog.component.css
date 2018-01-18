@@ -1,0 +1,10 @@
+.example-header-image {
+    background-image: url('../../assets/images/student.png');
+    background-size: cover;
+    display:inline-block;
+  }
+
+  .viewRow{
+      padding: 5px;
+      font-size: 16px;
+  }
